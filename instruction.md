@@ -1,5 +1,25 @@
 # CORENET X IFC-SG 專案執行步驟與應用策略指南 (Instruction.md)
 
+> [!IMPORTANT]
+> **環境配置絕對路徑紀錄 (本機環境：C:\Users\Use\Desktop\IFCSH)**
+> 為了確保團隊成員在不同電腦上能快速找到資源，以下為第一階段前置作業檔案的絕對路徑：
+> 
+> **A. 安裝程式 (軟體端)：**
+> 1. **Revit 2025 Patch**: 透過 Autodesk Access 線上更新 (狀態：已安裝)
+> 2. **Interoperability Tools**: `C:\Users\Use\Desktop\IFCSH\InteroperabilityTools_10_0_9_4966_2025.exe` (狀態：已備妥)
+> 3. **Revit-IFC Exporter (v25.4.40)**: `C:\Users\Use\Desktop\IFCSH\IFC.for.Revit.2025.4.40.0.msi` (狀態：已安裝)
+> 
+> **B. 官方 Toolkit 資源 (數據端 - COP Edition 3)：**
+> 4. **Shared Parameters (Step 1)**: `C:\Users\Use\Desktop\IFCSH\IFC+SG_SharedParameters_R2024.txt`
+> 5. **Classification for Subtypes (Step 2)**: `C:\Users\Use\Desktop\IFCSH\IFC+SG Classification for Subtypes.xlsx`
+> 6. **Property Set Mapping (Step 5)**: `C:\Users\Use\Desktop\IFCSH\IFC+SG Property Sets.txt`
+> 7. **Model Checker Config (Step 4)**: `C:\Users\Use\Desktop\IFCSH\IFC+SG_ModelCheckerConfiguration_R2024.xml`
+> 8. **SPT Configuration**: `C:\Users\Use\Desktop\IFCSH\IFC+SG_SPTConfiguration_R2024.xml`
+> 9. **Dynamo Scripts (Step 3 參數填寫輔助)**:
+>    - `C:\Users\Use\Desktop\IFCSH\1-Create a schedule to collect IFC parameters.dyn`
+>    - `C:\Users\Use\Desktop\IFCSH\2-Export schedule into excel.dyn`
+>    - `C:\Users\Use\Desktop\IFCSH\3-Import excel data to Revit elements.dyn`
+
 基於「C2D_IFC-SG Demonstration Meeting」的簡報與會議逐字稿內容，本指南詳細梳理了新加坡政府 CORENET X 專案中針對 IFC-SG (Industry Foundation Classes - Singapore) 模型的提交策略、執行步驟與應用細節。
 
 ## 壹、 IFC-SG 核心策略概述
@@ -56,25 +76,79 @@
 
 ## 參、 5 步標準執行工作流 (5 Steps to Prepare IFC-SG Model)
 
-在 Revit 模型製作過程中，請嚴格遵守以下線性工作流：
+在 Revit 模型製作過程中，請嚴格遵守以下線性工作流。建議**先理解手動流程，再執行自動化工具**。
 
 ### Step 1: 匯入 IFC-SG 參數 (Add IFC-SG Parameters)
-- 使用 IFC-SG Toolkit 將官方要求的必要欄位 (Fields) 注入至 Revit 模型中。
+
+#### 【初學者手動導引】
+1. **連結共享參數**: `Manage > Shared Parameters` > 瀏覽並選擇 `IFC+SG_SharedParameters_R2024.txt`。
+2. **注入參數**: `Manage > Project Parameters` > `Add` > 選擇 `Shared Parameter` > 挑選關鍵參數（如 `SystemName`）。
+3. **對齊品類**: 針對 Plumbing 專業，務必勾選 `Pipes`, `Pumps`, `Plumbing Fixtures` 等品類。
+
+#### 【專業者自動化回填 (推薦)】
+使用 **Shared Parameters Tool (SPT)** 載入 `IFC+SG_SPTConfiguration_R2024.xml` 進行一鍵注入。
+> [!CAUTION]
+> **自動化執行但書 (關鍵提醒)：**
+> 針對 2025 增加或需手動確認的欄位，請依照以下邏輯設定，確保 Model Checker 通過：
+> - **必須勾選 (Essential)**: `IfcObjectType` (這是 SDT 運作的核心，務必確保最左側勾選框已勾，並設為 **Instance**)。
+> - **Type (類型屬性)**: `BeamFaçade`, `DoubleBayFaçade`, `NumberOfRiser`, `PrefabricatedReinforcementCage`, `PrefinishedFaçade`, `SeatingCapacity`, `Watertight`。
+> - **Instance (實體屬性)**: `ExternalReference`, `SiteName`, `IfcObjectType`。
+> - **設定理由**: SDT 工具需要 `IfcObjectType` 參數存在於模型中才能寫入分類資料。若漏勾此項，SDT 將會噴出 "Parameter not found" 錯誤。
+
+---
 
 ### Step 2: 定義 IFC 類別 (Populate IFC Classes)
-- **嚴禁使用「Generic Models (常規模型)」**。所有的設備、管線都必須對應到正確的 Family Category，以確保轉換時能精準對應至 IFC Entities（例如：`IfcWall`, `IfcBeam`, 或是特定的 MEP 設備）。
-- 使用官方提供的 Mapping Table（Excel 或 CSV 表格）確保 Revit 分類與 IFC 類別一致。
+- **嚴禁使用「Generic Models (常規模型)」**。所有的設備、管線都必須對應到正確的 Family Category。
+- **操作建議**: 使用 **Standardized Data Tool (SDT)** 載入 `IFC+SG Classification for Subtypes.xlsx`，透過選單選取分類。
+
+#### 【常見元件查詢路徑範例】
+若在 SDT 中找不到特定組件（如 Tank），請嘗試以下官方路徑：
+- **水箱 (Tank)**: `MEP > Plumbing > Tank > WATERSTORAGE` (或是 `IfcTank`)。
+- **泵浦 (Pump)**: `MEP > Plumbing > Pump > CIRCULATINGPUMP / SUMPPUMP`。
+- **閥門 (Valve)**: `MEP > Plumbing > Valve > CHECKVALVE / ISOLATINGVALVE`。
+- **小撇步**: 若階層太深找不到，直接在 SDT 視窗的 **Search 框** 輸入英文單字（如 `Tank`），工具會自動過濾出所有相關的 IFC 分類。
+
+---
 
 ### Step 3: 填寫專案特定數值 (Populate IFC-SG Values)
-- 填寫各元件在 IFC-SG 中被要求標示的數值。
-- **策略重點**：善用下拉選單與工具包自動帶入功能，減少手動輸入（Manual Typing）以避免人為拼寫錯誤。
+
+#### 【給排水/泵浦專業填寫規範】
+- **參考依據**: `CORENET X COP 3.1 Edition 2025-12.pdf` **第 423 頁** (PDF 標註頁碼)。
+- **關鍵參數填寫建議**:
+  - **`SystemType`**: 必須符合官方預定義值（如 `Potable Water`, `Sanitary`, `Drainage`）。**大小寫必須完全一致**。
+  - **`SystemName`**: 專案唯一編號（如 `L1-PW-01`）。
+  - **`IsPotable`**: 飲用水系統務必勾選 `Yes`。
+  - **`Watertight`**: 泵浦室與特定閥門務必依設計需求勾選。
+
+#### 【自動化輔助】
+- 使用資料夾內的 Dynamo 腳本（`1-Create a schedule...dyn`）自動抓取參數至明細表，建議在 Excel 中統一編輯後再回傳 Revit，以避開人為打字錯誤。
+
+---
 
 ### Step 4: 參數合規性驗證 (Validate Parameters)
-- 匯出前，利用 Revit Schedules (明細表) 自行稽核，確保所有必要參數 (Mandatory Parameters) 沒有空白。
-- 也可以使用 IFC-SG Toolkit 內建的 Model Checker，讓系統自動掃描模型中是否有缺失或錯誤的參數格式。
+- 載入 `IFC+SG_ModelCheckerConfiguration_R2024.xml` 進行自動化掃描。
+
+---
+
+## 陸、 實戰故障排除 (Troubleshooting)
+
+### 1. SPT 工具出現紅框或 Choose...
+- **現象**: 載入 XML 後，部分參數（如 `SiteName`）顯示紅框且無法點擊 Run。
+- **解決**: 必須手動在下拉選單指定 **Group** 為 `IFC Parameters`。若未完成此動作，模型將不會出現該欄位。
+
+### 2. SDT 分類清單是空的 (找不到 Tank 等)
+- **現象**: 點選 Assign Picklist 後視窗沒有內容，或找不到對應元件。
+- **解決**: 
+  1. 檢查是否已執行 `SDT > Setup` 並載入 `IFC+SG Classification for Subtypes.xlsx`。
+  2. 確保 **Step 1 已點擊 Run**，若模型中沒有 `IfcObjectType` 參數，SDT 將無法寫入資料。
+
+### 3. PDF 頁碼對照提醒
+- 官方文件的 PDF 閱讀器顯示頁碼與右下角標註頁碼可能不符。
+- **請統一以頁面右下角標註為準**（例如：給排水系統規範在 **第 423 頁**）。
 
 ### Step 5: 匯出 IFC 模型 (Export to IFC)
-- 在 Revit 中選擇「Export to IFC」，並且**必須選擇 IFC 4x3** 版本的設定配置 (Schema)。
+- **必須選擇 IFC 4x3** 版本的設定配置。
+- 載入 `IFC+SG Property Sets.txt` 確保匯出時包含所有新加坡專用屬性。
 
 ---
 
