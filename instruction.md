@@ -32,12 +32,30 @@
 | 5 | Classification for Subtypes | `IFC+SG Classification for Subtypes.xlsx` |
 | 6 | Property Set Mapping | `IFC+SG Property Sets.txt` |
 | 7 | Model Checker Config | `IFC+SG_ModelCheckerConfiguration_R2024.xml` |
-| 8 | SPT Configuration | `IFC+SG_SPTConfiguraton_R2024.xml` |
+| 8 | SPT Configuration | `IFC+SG_SPTConfiguration_R2024.xml` |
 | 9 | Dynamo Script 1 | `1-Create a schedule to collect IFC parameters.dyn` |
 | 10 | Dynamo Script 2 | `2-Export schedule into excel.dyn` |
 | 11 | Dynamo Script 3 | `3-Import excel data to Revit elements.dyn` |
 
-### C. 安裝檢查表
+### C. 官方來源連結 (Original Sources)
+
+> [!NOTE]
+> 以下連結為各項工具與資源的官方原始下載頁面，供團隊成員查閱最新版本或在新電腦上重新下載。
+> 所有連結已於 2026-05-04 驗證可連線。
+
+| 項目 | 官方來源 URL | 狀態 |
+|------|-------------|------|
+| **Revit 更新** | [Autodesk Account (manage.autodesk.com)](https://manage.autodesk.com/) | ✅ |
+| **Interoperability Tools** | [Autodesk Interoperability Tools 官方網站](https://interoperability.autodesk.com/) | ✅ |
+| **Revit-IFC Exporter (GitHub)** | [Autodesk/revit-ifc Releases](https://github.com/Autodesk/revit-ifc/releases) | ✅ |
+| **Revit-IFC Exporter (App Store)** | [Autodesk App Store](https://apps.autodesk.com/) | ✅ |
+| **CORENET X 官方入口** | [CORENET X Official Portal](https://www.corenet.gov.sg/) | ✅ |
+| **CORENET X / BCA 資源頁** | [BCA CORENET X](https://www.bca.gov.sg/corenetx) | ✅ |
+
+> [!TIP]
+> **Revit-IFC Exporter 建議從 GitHub 下載**：GitHub 是 Autodesk 官方維護此開源外掛的地方，版本通常比 Revit 內建或 App Store 更新，能解決更多 IFC 4x3 匯出錯誤。
+
+### D. 安裝檢查表
 
 - [ ] Revit 2025 已更新至最新版本 (經由 Autodesk Access)
 - [ ] 已安裝 Autodesk Interoperability Tools (2025 版本)
