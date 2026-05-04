@@ -1,0 +1,468 @@
+{
+  "Uuid": "b6766200-1108-4e4a-ac6c-4056e37d4637",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "3-Import excel data to Revit elements_v2.1",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "6e99e8e44708487d8bcddf62ba8c5c9d",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "863269423c804eafa0c56092c0d63b3c",
+          "Name": "file",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eeb49be25f0f4edf95ee8a352222cd18",
+          "Name": "sheetName",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9508f444f0ca4bf0807f340c572f96e8",
+          "Name": "readAsStrings",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7bb646193b7b4e03bbcc34eb05bae916",
+          "Name": "showExcel",
+          "Description": "bool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5d126e1839e0485c849be2d554c72ea7",
+          "Name": "var[][]",
+          "Description": "var[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "DSOffice.Data.ImportExcel@var,string,bool,bool",
+      "Replication": "Auto",
+      "Description": "Data.ImportExcel (file: var, sheetName: string, readAsStrings: bool = false, showExcel: bool = true): var[][]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "Id": "1d2ee7cf9825496eb9161422f85484ff",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8db1efe0064c4231b5dabc5c8227e66b",
+          "Name": "",
+          "Description": "File Path",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system and returns its file path",
+      "HintPath": "D:\\OneDrive - Autodesk\\50.DYN\\91.Help John Rivas\\250818 scripts to work for 2025\\새 폴더\\IFC.xlsx",
+      "InputValue": ".\\IFC.xlsx"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "e4dadf78c3574ec4870f3d102f929df5",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8f79b92bcef349918fcdf66f9220e997",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "false;"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "Id": "6fa71239dac442c7b783efb4c402a28d",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "b7e0b372de07419a9ff62aa05b2daff2",
+          "Name": "path",
+          "Description": "Path to the file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "78253ae175aa4f76afc775237cc8c1dc",
+          "Name": "file",
+          "Description": "File object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a file object from the given path"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import clr\r\n\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\n\r\nclr.AddReference('RevitAPIUI')\r\nfrom Autodesk.Revit.UI import *\r\n\r\nclr.AddReference('System')\r\nfrom System.Collections.Generic import List\r\n\r\nclr.AddReference('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\nclr.ImportExtensions(Revit.Elements)\r\n\r\nclr.AddReference('RevitServices')\r\nfrom RevitServices.Persistence import DocumentManager\r\nimport RevitServices\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\n\r\ndef Unwrap(item):\r\n    result = []\r\n    if isinstance (item, list):\r\n        for i in item:\r\n            result.append(Unwrap(i))\r\n    else:\r\n        result = UnwrapElement(item)\r\n    return result\r\n\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nuidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument\r\n\r\n#Preparing input from dynamo to revit\r\nif isinstance(IN[0], list):\r\n    data = IN[0]\r\nelse:\r\n    data = [IN[0]]\r\noutVal = []\r\n\r\n\r\n\r\nfor dicList in data:\r\n    for dic in dicList:\r\n        element = doc.GetElement(ElementId(dic[\"ElementId\"]))\r\n        if element is None :\r\n            continue\r\n        elementType = doc.GetElement(element.GetTypeId())\r\n        parameters = []\r\n        hasValueChanged = False\r\n        for key in dic:\r\n            if key == \"ElementId\":\r\n                continue\r\n            parameter = element.LookupParameter(key)\r\n            if parameter is None:\r\n                parameter = elementType.LookupParameter(key)\r\n            type = parameter.StorageType\r\n            valueToChange = None\r\n            valueExisting = None\r\n            if type == StorageType.Double:\r\n                valueToChange = UnitUtils.ConvertToInternalUnits(float(dic[key]), parameter.GetUnitTypeId())\r\n                valueExisting = parameter.AsDouble()\r\n            elif type == StorageType.Integer:\r\n                if int(dic[key]) == \"No\":\r\n                    valueToChange = 0\r\n                elif int(dic[key]) == \"Yes\":\r\n                    valueToChange = 1\r\n                else:\r\n                    valueToChange = int(dic[key])\r\n                valueExisting = parameter.AsInteger()\r\n\r\n            elif type == StorageType.String:\r\n                if dic[key] == None:\r\n                    valueToChange = None\r\n                else:\r\n                    valueToChange = str(dic[key])\r\n                if parameter.AsString() == None:\r\n                    valueExisting = None\r\n                else:  \r\n                    valueExisting = parameter.AsString()\r\n                    \r\n            TransactionManager.Instance.EnsureInTransaction(doc)\r\n            if(valueToChange != valueExisting):\r\n                #CheckIf dataType is Bool\r\n                hasValueChanged = True\r\n                if parameter.Definition.GetDataType().TypeId == SpecTypeId.Boolean.YesNo.TypeId:\r\n                    parameter.Set(valueToChange)\r\n                elif type == StorageType.Double or type == StorageType.Integer:\r\n                    parameter.Set(valueToChange)\r\n                elif type == StorageType.ElementId: \r\n                    pass\r\n                else: \r\n                    parameter.Set(valueToChange)\r\n            TransactionManager.Instance.TransactionTaskDone()\r\n\r\n        if hasValueChanged:\r\n            outVal.append(element)\r\n\r\n\r\nOUT = outVal\r\n",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "4e0367c2a1484295be532becd09973cb",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "ff481eae8dce4ad982c07e18365bda40",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4e78dde57b874e1ebcc21635df21edf3",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import sys\r\nimport clr\r\nimport System\r\nfrom System import Array\r\nfrom System.Collections.Generic import List, IList, Dictionary\r\n\r\nclr.AddReference('DocumentFormat.OpenXml')\r\nimport DocumentFormat\r\nfrom DocumentFormat.OpenXml import *\r\nfrom DocumentFormat.OpenXml.Packaging import *\r\nfrom DocumentFormat.OpenXml.Spreadsheet import *\r\n\r\nfilepath = IN[0]\r\n\r\nspreadsheetDoc = SpreadsheetDocument.Open(filepath, False)\r\nworkbookPart = spreadsheetDoc.WorkbookPart\r\nsheetsName = [s.Name.Value for s in spreadsheetDoc.WorkbookPart.Workbook.Sheets]\r\nspreadsheetDoc.Close()\r\n\r\nOUT = sheetsName",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "3c9ab62ae00c4c5693265c9334571c55",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "cb9f9081ea9b425dbadb265ec9c9d734",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2e307a093bfa44a0a7e555ed962740f6",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import clr\r\n\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\nfrom Autodesk.Revit.DB.Structure import *\r\n\r\nclr.AddReference('RevitAPIUI')\r\nfrom Autodesk.Revit.UI import *\r\n\r\nclr.AddReference('System')\r\nfrom System.Collections.Generic import List\r\n\r\nclr.AddReference('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\nclr.ImportExtensions(Revit.Elements)\r\n\r\nclr.AddReference('RevitServices')\r\nimport RevitServices\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\nclr.AddReference('System.Windows.Forms')\r\nfrom System.Windows.Forms import *\r\nclr.AddReference('System.Drawing')\r\nfrom System.Drawing import *\r\nclr.AddReference('System')\r\nfrom System import *\r\n\r\nclr.AddReference('DSCoreNodes')\r\nfrom DSCore import Math\r\n\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nuidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument\r\n\r\n#Preparing input from dynamo to revit\r\nif isinstance (IN[0], list):\r\n\tsheetList = IN[0]\r\nelse:\r\n\tsheetList = [IN[0]]\r\n\r\n\r\ndef GetDpiMultiplier():\r\n    graphics = Graphics.FromHwnd(IntPtr.Zero)\r\n    dpi = graphics.DpiX    \r\n    return dpi/96\r\n    \r\nclass CustomForm():\r\n    \r\n    def __init__(self):\r\n    \r\n        #class data\r\n        self.data = 'foo'\r\n        self.mul = GetDpiMultiplier()\r\n\r\n        self.inputs = []\r\n        #form\r\n        self.form = Form()\r\n        self.form.ShowIcon = False\r\n        self.form.MaximizeBox = False\r\n        self.form.FormBorderStyle = FormBorderStyle.FixedSingle\r\n        #self.form.AutoScaleMode = AutoScaleMode.Dpi\r\n        self.form.Size = Size(400*self.mul,500*self.mul)\r\n        self.form.MinimumSize = Size(400*self.mul,500*self.mul)\r\n        self.form.ClientSize = Size(378*self.mul,444*self.mul)\r\n        self.form.BackColor = Color.DimGray;\r\n  \r\n        #label\r\n        self.label = Label()\r\n        self.label.Parent = self.form\r\n        self.label.Location = Point(12*self.mul,9*self.mul)\r\n        self.label.Size = Size(200*self.mul,25*self.mul)\r\n        self.label.Text = 'Select Sheets'\r\n        \r\n        #checklistBox\r\n        self.chkListBox = CheckedListBox()\r\n        self.chkListBox.Parent = self.form\r\n        self.chkListBox.CheckOnClick = True\r\n        self.chkListBox.Items.AddRange(self.inputs)\r\n        self.chkListBox.Parent = self.form\r\n        self.chkListBox.Location = Point(12*self.mul,45*self.mul)\r\n        self.chkListBox.Size = Size(354*self.mul,340*self.mul)\r\n        self.chkListBox.Anchor = (AnchorStyles.Bottom)|(AnchorStyles.Right)|(AnchorStyles.Top)|(AnchorStyles.Left)\r\n        #checkbox\r\n        self.chkBox = CheckBox()\r\n        self.chkBox.Parent = self.form\r\n        self.chkBox.CheckOnClick = True\r\n        self.chkBox.Text = 'Select All'\r\n        self.chkBox.Location = Point(12*self.mul, 403*self.mul)\r\n        self.chkBox.Size = Size(113*self.mul,29*self.mul)\r\n        self.chkBox.Anchor = (AnchorStyles.Bottom)|(AnchorStyles.Left)        \r\n        #buttons\r\n        self.button1 = Button()\r\n        self.button1.Text = 'Confirm'\r\n        self.button1.Name = 'Confirm'\r\n        self.button1.Parent = self.form\r\n        self.button1.Location = Point(136*self.mul,398*self.mul)\r\n        self.button1.Size = Size(112*self.mul,34*self.mul)\r\n        self.button1.Anchor = (AnchorStyles.Bottom)|(AnchorStyles.Right)\r\n        \r\n        self.button2 = Button()\r\n        self.button2.Text = 'Cancel'\r\n        self.button2.Name = 'Cancel'\r\n        self.button2.Parent = self.form\r\n        self.button2.Location = Point(254*self.mul,398*self.mul)\r\n        self.button2.Size = Size(112*self.mul,34*self.mul)\r\n        self.button2.Anchor = (AnchorStyles.Bottom)|(AnchorStyles.Right)\r\n        \r\n        #events\r\n        \r\n        self.form.Load += self.formLoadHandler\r\n        self.button1.Click += self.buttonClickHandler\r\n        self.button2.Click += self.buttonClickHandler        \r\n        self.chkBox.CheckedChanged += self.chkStateEventHandler\r\n    \r\n    def Show(self):\r\n        self.chkListBox.Items.AddRange(self.inputs)\r\n        self.form.ShowDialog()\r\n                \r\n    def chkStateEventHandler(self, sender, args):\r\n        if(sender.Checked):\r\n            self.chkListBox.Enabled = False\r\n            self.chkListBox.BackColor = SystemColors.ScrollBar\r\n        else:\r\n            self.chkListBox.Enabled = True\r\n            self.chkListBox.BackColor = SystemColors.Window\r\n   \r\n        \r\n    def keyPressHandler(self, sender, args):\r\n\r\n        if (args.KeyCode == Keys.Enter):\r\n           self.buttonClickHandler(self.button1, args)\r\n\t\t\r\n    def buttonClickHandler(self, sender, args):\r\n        if(sender.Name == 'Cancel'):\r\n            self.form.Close()\r\n        if(sender.Name == 'Confirm'):\r\n            if self.chkBox.Checked:\r\n                self.data = self.chkListBox.Items\r\n            else:\r\n                self.data = self.chkListBox.CheckedItems\r\n            self.form.Close()\r\n\r\n    def formLoadHandler(self, sender, args):\r\n        sender.Text = 'Dynamo IFC-SG'\r\n\r\n\r\n\r\ncf = CustomForm()\r\ncf.inputs = sheetList\r\ncf.Show()\r\n\r\noutVal = []\r\nfor sheet in sheetList:\r\n    if sheet in cf.data:\r\n        outVal.append(sheet)\r\n\r\n \r\n\r\nOUT = outVal",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "6f4e4171f305453f915e87cd23902778",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "2305285828fd4f2ab0bd7e57835555b9",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5b384834bf4b48a58e3eea8d3b9ee010",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import clr\r\n\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\n\r\nclr.AddReference('RevitAPIUI')\r\nfrom Autodesk.Revit.UI import *\r\n\r\nclr.AddReference('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\nclr.ImportExtensions(Revit.Elements)\r\n\r\nclr.AddReference('RevitServices')\r\nfrom RevitServices.Persistence import DocumentManager\r\nimport RevitServices\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\n\r\ndef Unwrap(item):\r\n    result = []\r\n    if isinstance (item, list):\r\n        for i in item:\r\n            result.append(Unwrap(i))\r\n    else:\r\n        result = UnwrapElement(item)\r\n    return result\r\n\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nuidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument\r\n\r\n#Preparing input from dynamo to revit\r\nif isinstance(IN[0], list):\r\n    data = [Unwrap(e) for e in IN[0]]\r\nelse:\r\n    data = [Unwrap(IN[0])]\r\noutVal = []\r\nfor subData in data:\r\n    dicList = []\r\n    keys = subData[0]\r\n    valueSet = [d for i, d in enumerate(subData) if i != 0]\r\n    for values in valueSet:\r\n        dic = dict()\r\n        for i, value in enumerate(values):\r\n            if value is not None:\r\n                dic[keys[i]] = value\r\n        dicList.append(dic)\r\n    outVal.append(dicList)\r\n#Do some action in a Transaction\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\nTransactionManager.Instance.TransactionTaskDone()\r\nOUT = outVal",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "e491768c9b9644e186f7b246f0885995",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "5dad1e482c564530bb09bd85366c5c82",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "07ed155db74449528f9e9848c5ad359b",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "5d126e1839e0485c849be2d554c72ea7",
+      "End": "5dad1e482c564530bb09bd85366c5c82",
+      "Id": "bde50b21e2ac437cae8b8f928a733f99",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8db1efe0064c4231b5dabc5c8227e66b",
+      "End": "b7e0b372de07419a9ff62aa05b2daff2",
+      "Id": "d375c806189b4c76a49b3736b40d45b7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8db1efe0064c4231b5dabc5c8227e66b",
+      "End": "cb9f9081ea9b425dbadb265ec9c9d734",
+      "Id": "63722c05db19463298871058acd9704b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8f79b92bcef349918fcdf66f9220e997",
+      "End": "9508f444f0ca4bf0807f340c572f96e8",
+      "Id": "8e08bbdc52504d4d932ead8bdfd3a9f8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8f79b92bcef349918fcdf66f9220e997",
+      "End": "7bb646193b7b4e03bbcc34eb05bae916",
+      "Id": "6e8ac335dd784e51950d0767ff2a9679",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "78253ae175aa4f76afc775237cc8c1dc",
+      "End": "863269423c804eafa0c56092c0d63b3c",
+      "Id": "ad8d081a2b854efbb9a56ffc3f942f5f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2e307a093bfa44a0a7e555ed962740f6",
+      "End": "2305285828fd4f2ab0bd7e57835555b9",
+      "Id": "865c9d75b2904916b4d8176f67ed33ec",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5b384834bf4b48a58e3eea8d3b9ee010",
+      "End": "eeb49be25f0f4edf95ee8a352222cd18",
+      "Id": "c9354aabce7b4473b10cde200e392cc5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "07ed155db74449528f9e9848c5ad359b",
+      "End": "ff481eae8dce4ad982c07e18365bda40",
+      "Id": "75e44b2c0da44f6385ce277989d1a29c",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "IFC.xlsx",
+      "ReferenceType": "External",
+      "Nodes": [
+        "1d2ee7cf9825496eb9161422f85484ff"
+      ]
+    }
+  ],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "6e99e8e44708487d8bcddf62ba8c5c9d",
+        "Name": "Data.ImportExcel",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 622.9252857367682,
+        "Y": 279.26266991188703
+      },
+      {
+        "Id": "1d2ee7cf9825496eb9161422f85484ff",
+        "Name": "File Path",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -412.1705960602195,
+        "Y": 50.719352986072664
+      },
+      {
+        "Id": "e4dadf78c3574ec4870f3d102f929df5",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 256.20188002946327,
+        "Y": 483.1355983795961
+      },
+      {
+        "Id": "6fa71239dac442c7b783efb4c402a28d",
+        "Name": "File From Path",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 267.9678230104919,
+        "Y": 41.809008156440086
+      },
+      {
+        "Id": "4e0367c2a1484295be532becd09973cb",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1538.688207202318,
+        "Y": 427.75469925981815
+      },
+      {
+        "Id": "3c9ab62ae00c4c5693265c9334571c55",
+        "Name": "Get Excel Sheet Name",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -172.82400502620123,
+        "Y": 251.60980464406543
+      },
+      {
+        "Id": "6f4e4171f305453f915e87cd23902778",
+        "Name": "Windows form-Select Sheet",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 102.02808724860688,
+        "Y": 258.34698713839737
+      },
+      {
+        "Id": "e491768c9b9644e186f7b246f0885995",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1263.3299775984062,
+        "Y": 387.1882637912816
+      }
+    ],
+    "Annotations": [],
+    "X": 48.090062239070676,
+    "Y": 70.03918469432733,
+    "Zoom": 0.7389742222963022
+  }
+}

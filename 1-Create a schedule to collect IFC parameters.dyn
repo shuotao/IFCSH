@@ -1,0 +1,417 @@
+{
+  "Uuid": "eeaa49be-3558-45c6-b00b-4a479d884d32",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "1-Create a schedule to collect IFC parameters_v2",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "import clr\r\n\r\nclr.AddReference('RevitAPI')\r\nfrom Autodesk.Revit.DB import *\r\n\r\nclr.AddReference('RevitAPIUI')\r\nfrom Autodesk.Revit.UI import *\r\n\r\nclr.AddReference('System')\r\nfrom System.Collections.Generic import List\r\nfrom System import Enum\r\n\r\nclr.AddReference('RevitNodes')\r\nimport Revit\r\nclr.ImportExtensions(Revit.GeometryConversion)\r\nclr.ImportExtensions(Revit.Elements)\r\n\r\nclr.AddReference('RevitServices')\r\nfrom RevitServices.Persistence import DocumentManager\r\nimport RevitServices\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\n\r\ndef Unwrap(item):\r\n    result = []\r\n    if isinstance (item, list):\r\n        for i in item:\r\n            result.append(Unwrap(i))\r\n    else:\r\n        result = UnwrapElement(item)\r\n    return result\r\n\r\n\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\nuidoc=DocumentManager.Instance.CurrentUIApplication.ActiveUIDocument\r\ndef Check_IFC_Group(s, doc):\r\n    app = doc.Application\r\n    if (int(app.VersionNumber)>2024):\r\n        return s.Definition.GetGroupTypeId() == GroupTypeId.Ifc\r\n    else:\r\n        return s.Definition.ParameterGroup == BuiltInParameterGroup.PG_IFC\r\n    return 0\r\n#Preparing input from dynamo to revit\r\nif isinstance(IN[0], list):\r\n    categories = [Unwrap(e) for e in IN[0]]\r\nelse:\r\n    categories = [Unwrap(IN[0])]\r\n\r\nif isinstance(IN[1], list):\r\n    titles = [Unwrap(e) for e in IN[1]]\r\nelse:\r\n    titles = [Unwrap(IN[1])]\r\n\r\nbool = IN[2]\r\n\r\nviewSchedules = FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_Schedules).ToElements()\r\n#Do some action in a Transaction\r\noutVal = []\r\nTransactionManager.Instance.EnsureInTransaction(doc)\r\n\r\nfor i, cat in enumerate(categories):\r\n    sEle = FilteredElementCollector(doc).OfCategoryId(cat.Id).WhereElementIsNotElementType().FirstElement()\r\n    if sEle == None:\r\n        continue\r\n    eleParams = [s for s in sEle.Parameters]\r\n    paramId_Type = [s.Id.IntegerValue for s in eleParams if s.Definition.BuiltInParameter == BuiltInParameter.ELEM_TYPE_PARAM]\r\n    paramId_IfcGroup = [s.Id.IntegerValue for s in eleParams if Check_IFC_Group(s, doc)]\r\n    vs = next((v for v in viewSchedules if v.Name == titles[i]),-1)\r\n    if vs == -1:\r\n        vs = ViewSchedule.CreateSchedule(doc, cat.Id)\r\n        vs.Name = titles[i]\r\n    vd = vs.Definition\r\n    sf = vd.GetSchedulableFields() \r\n    \r\n    for s in sf:\r\n        if s.FieldType != ScheduleFieldType.Instance and s.FieldType != ScheduleFieldType.ElementType:\r\n            continue\r\n        \r\n        if s.ParameterId.IntegerValue in paramId_Type:\r\n            try: \r\n                vd.AddField(s)\r\n            except:\r\n                continue\r\n        if s.ParameterId.IntegerValue in paramId_IfcGroup:\r\n            if s.ParameterId.IntegerValue < 0 and not bool:   # This will exclude all built in parameter in parametergroup : PG_IFC\r\n                continue\r\n            try: \r\n                vd.AddField(s)\r\n                \r\n            except:\r\n                continue  \r\n   \r\n    outVal.append(vs)\r\n\r\nTransactionManager.Instance.TransactionTaskDone()\r\nOUT = outVal",
+      "Engine": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "821aa5eabb10432db7bd9af9d696411d",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "db45ca01404f44cebc28602dc01ad06c",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e4f94e6a73b54aedaf61d8582fe9d0a1",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7a258c22cb1347388e8266d8485625c3",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4ab738286d6143cfa75ea70b707f14bc",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "Id": "a152c109a9b943819fc2bc40f618693d",
+      "NodeType": "CodeBlockNode",
+      "Inputs": [
+        {
+          "Id": "b3e6c7350f6546afb9f47603c970dcbf",
+          "Name": "A",
+          "Description": "A",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4c70ff3a32a5499caac0dd74f9d66dbc",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly",
+      "Code": "A+\"_IFC\";"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 732,
+      "SelectedString": "OST_Walls",
+      "Id": "ae3470c83cf4433fb9eee089b54f93f5",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "48f68cfbe9ed4bd69a1a94c76ecf8d7b",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 749,
+      "SelectedString": "OST_Windows",
+      "Id": "845eea4041e64c91a3b45d00c6d08d09",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b9466f8657de4e338a502434371b14d5",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 178,
+      "SelectedString": "OST_Doors",
+      "Id": "cf4f41f64d5a45f98abef29631e55eca",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1a9136fdcabb42769cec75e28a773628",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "Id": "afad3a1d5d8e4852932159e9896870e5",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "2a959c6ae24d4252bbba56970a800d18",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7c89c141f55148e1b2a3798be1f77f45",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b79d7066d4f249a58d55652f7cfd2d72",
+          "Name": "item2",
+          "Description": "Item Index #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cb112a508bda499aad7e45bf0b76c1c8",
+          "Name": "list",
+          "Description": "A list (type: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list from the given inputs"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "Id": "8269e7eba3f646eb8f3dc60c689006e4",
+      "NodeType": "BooleanInputNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "426f96dbd31e48eb90387d76cfe69895",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Enables selection between True and False",
+      "InputValue": false
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "4c70ff3a32a5499caac0dd74f9d66dbc",
+      "End": "e4f94e6a73b54aedaf61d8582fe9d0a1",
+      "Id": "8f2ab94f98314dafbbf0059f32645c3b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "48f68cfbe9ed4bd69a1a94c76ecf8d7b",
+      "End": "2a959c6ae24d4252bbba56970a800d18",
+      "Id": "27ebbecff69947adb08dffa6ca15c500",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b9466f8657de4e338a502434371b14d5",
+      "End": "7c89c141f55148e1b2a3798be1f77f45",
+      "Id": "ce95228739034c5093a33317fd83fde8",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1a9136fdcabb42769cec75e28a773628",
+      "End": "b79d7066d4f249a58d55652f7cfd2d72",
+      "Id": "f813f5c8aa424bb0925658dba1368fb0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cb112a508bda499aad7e45bf0b76c1c8",
+      "End": "b3e6c7350f6546afb9f47603c970dcbf",
+      "Id": "3634084da89d47d38df8217f6e41f8bc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cb112a508bda499aad7e45bf0b76c1c8",
+      "End": "db45ca01404f44cebc28602dc01ad06c",
+      "Id": "b7d1958bc12d47c2b3ac610a5aaa129e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "426f96dbd31e48eb90387d76cfe69895",
+      "End": "7a258c22cb1347388e8266d8485625c3",
+      "Id": "b7fad4d5b77c4f0d8f26685e2d1da96d",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "EnableLegacyPolyCurveBehavior": true,
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "3.3.0.6316",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "821aa5eabb10432db7bd9af9d696411d",
+        "Name": "Make Schedule",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 426.4812932501758,
+        "Y": 363.32661266237614
+      },
+      {
+        "Id": "a152c109a9b943819fc2bc40f618693d",
+        "Name": "Code Block",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 100.137174992224,
+        "Y": 523.3678316454427
+      },
+      {
+        "Id": "ae3470c83cf4433fb9eee089b54f93f5",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -468.62289679225694,
+        "Y": 356.20777249538804
+      },
+      {
+        "Id": "845eea4041e64c91a3b45d00c6d08d09",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -468.33082427434215,
+        "Y": 491.14353458439626
+      },
+      {
+        "Id": "cf4f41f64d5a45f98abef29631e55eca",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -466.03178621765335,
+        "Y": 627.7517583749783
+      },
+      {
+        "Id": "afad3a1d5d8e4852932159e9896870e5",
+        "Name": "List Create",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -153.94881312896905,
+        "Y": 363.56582218762685
+      },
+      {
+        "Id": "8269e7eba3f646eb8f3dc60c689006e4",
+        "Name": "include BuiltInPrameters in IFC Group",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": -78.16285561227937,
+        "Y": 862.9310052536642
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "4dcd479880f34c3b8a4a51a57ae4662b",
+        "Title": "<Double click here to edit group title>",
+        "DescriptionText": "<Double click here to edit group description>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8269e7eba3f646eb8f3dc60c689006e4"
+        ],
+        "HasNestedGroups": false,
+        "Left": -88.16285561227937,
+        "Top": 746.9310052536642,
+        "Width": 378.0,
+        "Height": 248.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 862.9310052536642,
+        "InitialHeight": 145.0,
+        "TextblockHeight": 106.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": 412.52604080465255,
+    "Y": 59.62240560437499,
+    "Zoom": 0.6767966603156944
+  }
+}

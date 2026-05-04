@@ -1,0 +1,1905 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedParametersConfig Version="10.0" Name="IFC+SG Shared Parameters Tool Configuration" Author="Autodesk, Inc." Description="Configuration file based CORENET X Code of Practice 3rd Edition December 2025" Image="https://interoperability.autodesk.com/singapore/images/cx_logo.png">
+  <Parameters>
+    <Parameter GUID="2e780877-e369-412e-9ce5-36eceb85a2b7" Name="Width" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2001350" Name="Specialty Equipment" />
+        <Category ID="-2001180" Name="Parking" />
+        <Category ID="-2000120" Name="Stairs" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6c84910e-1306-4836-8278-420800a4deac" Name="BarrierFreeAccessibility" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2001350" Name="Specialty Equipment" />
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2000180" Name="Ramps" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="20a16e72-e0dc-4437-b442-654ad33d36cb" Name="BeamSpanType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5bb2eb0e-cb30-4762-8d2d-0307c0022955" Name="BottomLeft" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3c92f08e-03f5-4084-b6e5-9e251118ce39" Name="BottomMiddle" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3de1cb73-a5e0-4853-958c-e83348db7f6f" Name="BottomRight" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e517a300-3e40-45f6-8d94-d92dc28cfae1" Name="ConstructionMethod" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008010" Name="Duct Fittings" />
+        <Category ID="-2008000" Name="Ducts" />
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000011" Name="Walls" />
+        <Category ID="-2008049" Name="Pipe Fittings" />
+        <Category ID="-2000095" Name="Model Groups" />
+        <Category ID="-2000035" Name="Roofs" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e96814e6-cd84-44bc-8461-35e60fef867a" Name="Depth" Group="STR" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4df616ac-858e-445d-8ace-4bf98ba6529d" Name="LeftConnectionDetail" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d8a02c71-6204-40e9-9484-e650be2579c8" Name="LeftConnectionType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e08b8538-53b5-4e1c-b130-df7174cb1fc1" Name="MaterialGrade" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000120" Name="Stairs" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="fa360cf3-8ef6-452f-af97-e3fa7c719e01" Name="MechanicalConnectionType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000120" Name="Stairs" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0d60ff1b-3b9c-44a8-9671-ebb6611f07b7" Name="MemberSection" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="42ef7b51-b4c5-434b-bb42-dbd25edc0b40" Name="PrefabricatedReinforcementCage" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="7ba2a733-1972-48e4-b0a3-76244a17753a" Name="ReferTo2DDetail" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000120" Name="Stairs" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0a1d60ac-6d0e-4770-8296-9f3a1b4b4194" Name="ReinforcementSteelGrade" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000120" Name="Stairs" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="63d1dd7c-b8aa-4913-9bcf-5f9a235edddd" Name="RightConnectionDetail" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b769f85a-6e9a-4a26-9083-3b407d12a467" Name="RightConnectionType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0abe1b17-189c-450d-9a22-d6af6487d713" Name="SectionFabricationMethod" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2cfd831b-15f1-4efe-a9c3-8372070421bb" Name="SideBar" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4e40a114-fc5b-4ce5-83f4-f976ccacb0e2" Name="SpliceConnection" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3f426b34-1892-4845-aedd-34871a088726" Name="StirrupsLeft" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b9c91e96-52b1-4a0b-8c30-30d815179687" Name="StirrupsMiddle" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e16bf9af-f8c3-4f4c-be9d-cb1af66ecee3" Name="StirrupsRight" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="bd31f8a9-178c-4bce-8edb-419b546a419c" Name="StirrupsTypeLeft" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="dcbf0936-d076-4081-93ff-6062f08cd2d1" Name="StirrupsTypeMiddle" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="14d8faf4-29b4-46a4-b51e-a159634e73e5" Name="StirrupsTypeRight" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="93e2f14d-747a-4b54-8578-34251023c9ae" Name="TopLeft" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="25dbc66e-fff4-440a-9642-754d0de14606" Name="TopMiddle" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d4140c2f-4424-471b-8e3e-85d982f73ac4" Name="TopRight" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001320" Name="Structural Framing" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b6f81c3c-ad5f-401e-a64f-00eaa845205d" Name="SHDLevel_SPT_MoreThan_100N" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b8b12b19-0db9-4552-9720-f6df2d1e4a4f" Name="SHDLevel_SPT_MoreThan_60N" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="212ccb65-4c28-4325-9d46-b0fba90dbc2f" Name="TerminationLevel" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="85dca94c-18dd-47e8-a4b8-3dddd5a77248" Name="TopLevel" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b6ef0d41-8bd5-46e2-a87b-0fc9e9c63ff0" Name="Hose_NominalDiameter" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="09568ee3-1155-4f45-a9b0-25e99c6c1710" Name="ID" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="616e52bf-7aba-4a00-902b-20aa8f6d9b8a" Name="SystemName" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008010" Name="Duct Fittings" />
+        <Category ID="-2008000" Name="Ducts" />
+        <Category ID="-2008049" Name="Pipe Fittings" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2008099" Name="Sprinklers" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="93d91bdc-7a52-444d-9eb5-63cfef87cbc0" Name="SystemType" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008010" Name="Duct Fittings" />
+        <Category ID="-2008000" Name="Ducts" />
+        <Category ID="-2008049" Name="Pipe Fittings" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2008099" Name="Sprinklers" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b044ae3f-2118-4311-8908-2a52c933b6c2" Name="FireRating" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000038" Name="Ceilings" />
+        <Category ID="-2008016" Name="Duct Accessories" />
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000035" Name="Roofs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="47cd446d-f21c-42f4-a5d7-4654f857a245" Name="Material" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000038" Name="Ceilings" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000126" Name="Railings" />
+        <Category ID="-2000180" Name="Ramps" />
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2000035" Name="Roofs" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c9909f44-986a-4c32-abe6-bee0a41fd8aa" Name="ArrangementType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a96cfd4c-55b9-432a-9e9f-9c674a1b6ecf" Name="Breadth" Group="STR" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b80e4b70-5206-43de-a5c3-573f8ce0ddbc" Name="ConnectionDetailsBottom" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b2da7589-4190-49c3-b6d0-bbe97a203171" Name="ConnectionDetailsTop" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e8b18495-e389-478b-a713-c66dd3d77a52" Name="ConnectionTypeBottom" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c1a3014f-555a-48b4-8d55-82d13bb26f40" Name="ConnectionTypeTop" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="03a9a23d-3b4f-40cf-8948-93acb437fca8" Name="Diameter" Group="STR" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f84c47d4-a70e-41b6-84eb-cf13d34d349e" Name="EndStorey" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6629d29a-79cb-4d91-bd90-f21f31ad787b" Name="MainRebar" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="578490fa-fc71-4983-bdb0-7c27aaecacce" Name="SpliceDetail" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="76870a9f-1363-46ce-907f-0a9aa3f3087c" Name="StartingStorey" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5938fd00-1604-499c-9115-94afa6296809" Name="Stirrups" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="52cc50a0-04f4-4fa4-a9ce-a4f8cd5cc467" Name="StirrupsType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0f907c33-e7c4-42fa-89ba-593548f0e54d" Name="WorkingLoad_DA1-1" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="689c2fc2-0e7b-447a-be99-c16159b1888b" Name="WorkingLoad_DA1-2" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="460af1a5-b2d5-4ff1-a114-ccfc680a1546" Name="PWCS_Flushing" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001040" Name="Electrical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="dc8ad9e3-b460-484c-8a50-570284e8be4e" Name="Purpose" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001040" Name="Electrical Equipment" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e729cf3a-5bc2-493e-bc4d-755d7ce8a29a" Name="Gradient" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2000180" Name="Ramps" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5ff976f4-5bb5-4143-8180-06aa905a4724" Name="Height" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000126" Name="Railings" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8be0ee8a-bfa2-4ebc-b91a-15c1b2f60599" Name="Length" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2001350" Name="Specialty Equipment" />
+        <Category ID="-2001180" Name="Parking" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e18ea770-2ee3-429b-a6ab-774d667a68df" Name="LoadBearing" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3a75e02c-b700-436e-9cc9-ee4617e64913" Name="Thickness" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008049" Name="Pipe Fittings" />
+        <Category ID="-2000011" Name="Walls" />
+        <Category ID="-2000120" Name="Stairs" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="446384ba-bb0d-4a0e-98b8-e7d26f7fc282" Name="InvertLevel" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a4e8382c-dc1d-4e60-9b57-e3a738424568" Name="Status" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2001079" Name="Toposolid" />
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="78b91828-a1cf-423c-b7bd-368ae2bf02c4" Name="TradeEffluent" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008010" Name="Duct Fittings" />
+        <Category ID="-2008000" Name="Ducts" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2e3f1dfc-b565-43d4-b097-eb42672ebc62" Name="ExternalReference" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c57d32e7-960e-4000-bd62-e67cec01f76e" Name="Watertight" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2d129435-53ee-47f1-886e-409dbc1918f1" Name="ClearHeight" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2001350" Name="Specialty Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="37397076-37b5-42b2-946b-94ed0119f412" Name="ClearWidth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2001350" Name="Specialty Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e9e79672-3447-4d4d-88ae-109c01c51b21" Name="FireAccessOpening" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2000996" Name="Shaft Openings" />
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a0211c02-3c17-4a2c-b091-bff5c4eb836f" Name="FireExit" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cec985f5-b81d-4523-b8c4-ad9b5701550a" Name="MainEntrance" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2c83ba0d-cde6-4944-89b1-55201b4fc754" Name="OneWayLockingDevice" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3fd4e0dc-0be2-47c6-acd6-64ef0ddad42c" Name="OperationType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="07c06711-a7f8-4363-9594-6c4d0a6de2e2" Name="OverallWidth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b248d7f4-ecbd-4565-80e8-ccfea40b2c74" Name="PowerOperated" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="edd07be5-f02f-429f-aa31-3ec0be0b1c8c" Name="SelfClosing" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="adb1cf70-7b0e-4052-8fc5-d3798566bd63" Name="StructuralHeight" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e616fff9-84e0-48f9-a9d6-05f79c1b32bb" Name="StructuralWidth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="368f1ec3-0279-4b13-9c48-1550260a1013" Name="VisionPanel" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5f3418db-36e7-467e-83b6-47cd31bbaab0" Name="FireExtinguisherRating" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="43af4ffd-5adf-403b-b30f-e0379606f8cf" Name="Private" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="20ab3e39-0888-44d1-9ed8-ff21be9e6cc3" Name="Public" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="feb5dc1c-5db8-43c0-a4c1-393c8baf7495" Name="BottomDistribution" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="9d352056-ffcb-4290-a6cd-080a3517c5ce" Name="BottomMain" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cf1bcd21-6bad-4886-bc85-7d0d78be1fc7" Name="DA1-1_BearingCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="039c8573-fec2-44d4-aaf1-338323643deb" Name="DA1-2_BearingCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e19fb2d4-b473-45c9-9afb-bbbf0b894561" Name="SoilVerificationTest" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="7d74bc18-0807-42a3-bc76-58bbae835886" Name="TopDistribution" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="830eab9f-ffa1-441d-9f25-75cff3baf2b1" Name="TopMain" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3541d48f-93a7-4583-a7f9-e715f5ee4d57" Name="ApprovedSoilMixture" Group="External Works" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="284a54ae-aaee-46c0-ad72-6901839624c7" Name="ApprovedTurfSpecies" Group="External Works" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="bfe32e0a-a06d-4518-b737-b2f81d73627e" Name="ShrubSpecies" Group="External Works" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="15783737-cb61-4180-b86e-0d65c4851d0e" Name="ALS_GreeneryFeatures" Group="External Works" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="199e0b08-eaac-4b2f-9331-ededfe4011d9" Name="ALS_LandscapeType" Group="External Works" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4f685e68-a663-47ea-ace0-f8cdf15e3983" Name="ALS_Status" Group="External Works" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6fa47167-9213-4b80-95e9-5283f45d6866" Name="SpaceName" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="51b471c0-84a7-42ce-b760-ebf13f8ea142" Name="InternalLength" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a60b918a-188a-4c67-bd73-d34120cabee8" Name="InternalWidth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="de8d5c02-23cb-4e80-88bd-1ce3cedeb185" Name="AGF_Name" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2001180" Name="Parking" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b0382ef9-4d0f-4b68-a376-af3f0d67cd10" Name="ShelterUsage" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e94cdda5-4074-4bc3-a464-54f92927b416" Name="ComplyToPUBStandardDrawing" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4b345e7f-3546-4fa5-9693-be0e5d4d9153" Name="ReferToDrawingNumber" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6f3da0c4-53bd-412e-96c4-c85dba8b4099" Name="Girth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="82173c3a-8820-43fa-9fba-0a61100698bb" Name="HedgeNumber" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="9630cc2b-20d4-4b9b-8318-8500ed733627" Name="ReasonForRemoval" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b9f01fbf-178b-48ec-90c5-7dad7d97f8af" Name="Roadside" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="51abba35-3c00-4e27-aa28-d7f348a428f4" Name="SingleStem" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="636185c8-f661-4b2e-bddd-4a2b7ea5fc5a" Name="Species" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="884c576d-8f78-488a-b4c6-eeeff0af82c2" Name="TreeNumber" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f751ea29-abf6-48ab-b306-99f7620586e9" Name="TreeSize" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="53a6c6fa-a8e1-4a79-9ad4-27ce1a5e88f3" Name="Turf" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001360" Name="Planting" />
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c6417860-9633-41c5-87a7-ba025add6d9a" Name="ClearDepth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001350" Name="Specialty Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b84a07b6-67a8-427a-a57f-15fb584b10e1" Name="FireFightingLift" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001350" Name="Specialty Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2a8062a4-aceb-4d77-b962-a3e36d005cef" Name="LiftType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001350" Name="Specialty Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="53d1a959-2499-4c21-9467-16a4370150d8" Name="FamilyLot" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="465e5622-1a29-448f-a415-3f284cc7559f" Name="LotNumber" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="84dc9c40-4468-4a62-ab64-a21d1ff59d8e" Name="CarParking_ServedByCarLift" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001180" Name="Parking" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="fe0cf7ab-c80e-4584-b24c-3dccd9546c7b" Name="MechanisedParkingSystem" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001180" Name="Parking" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="90dbabf9-ced7-40d1-8ce8-696cc499cbe0" Name="Perforated" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001180" Name="Parking" />
+        <Category ID="-2008044" Name="Pipes" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d521c84c-f631-42b8-a146-db64e7da3752" Name="OpenAtGrade" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001180" Name="Parking" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c2c37dcf-afde-495e-8af0-0eb4aa714ff6" Name="ParkingUse" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001180" Name="Parking" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="558ccfbc-b370-461c-a6a2-11788ba5d503" Name="VehicleType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001180" Name="Parking" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b6aaa7a8-548c-4e3b-ad61-6708145c5bca" Name="BicycleRack_Type" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001180" Name="Parking" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d2a2f9fc-78dd-42e1-bcab-65e27682c336" Name="VentilationMode" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a68f6fc6-39b4-4542-a38e-cd48a3bf98bf" Name="BoreholeRef" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="de803b67-88a4-4bc6-b93d-296077e961ab" Name="CutOffLevel_SHD" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a74eda23-e0d1-419c-afa0-cf1a861e1adb" Name="DA1-1_CompressionCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="886a48a2-5645-4f9f-bbd2-59db7864d957" Name="DA1-1_CompressionDesignLoad" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e0b7d854-0750-4de3-858e-33e8f760ac96" Name="DA1-1_TensionCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="04909b9a-cfa7-422b-8fc6-d6cf06307eeb" Name="DA1-1_TensionDesignLoad" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e9d69f04-d3a6-495f-9344-b67a426db15e" Name="DA1-2_CompressionCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3931abc3-45d7-4204-89f6-aaf397ba169d" Name="DA1-2_CompressionDesignLoad" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="85e03b63-6fdc-4deb-9bca-7ff9995ac5e2" Name="DA1-2_TensionCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="61d32c8f-2590-4c82-93fe-9e6252c16738" Name="DA1-2_TensionDesignLoad" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3e43137e-6e36-4546-9bd6-293602a14d9a" Name="MinEmbedmentIntoBearingLayer_SPT_MoreThan_100N" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b597edae-1acd-4215-845c-19b3fa1f0ad7" Name="MinEmbedmentIntoBearingLayer_SPT_MoreThan_60N" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="746d76ed-a38e-446e-9096-dd6510035be3" Name="MinRockSocketingLength" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="723141ab-f905-4658-93f0-bc3872067594" Name="NegativeSkinFriction" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="80ae3879-5c02-43cd-ae62-c6e09cc623fd" Name="PileType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4dc4e68e-86fd-4990-87e0-682d90ffe180" Name="ReinforcementLength" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1e3bbb6a-7968-4b1b-8ff1-cd710e1717c9" Name="StructuralCompressionCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="bdedb654-2cc9-4036-8122-93c6a047c499" Name="StructuralTensionCapacity" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d91704cc-1102-47ec-8bee-030bafb8dfc1" Name="ToeLevel_SHD" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001300" Name="Structural Foundations" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="876a768a-9378-4cae-bfa4-08f0fe7c0f2a" Name="PileModelFactor" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="fa005e16-efe7-47d8-9585-7bb9fce35438" Name="ShaftR4DesignFactor" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e443a334-355a-4ca1-ac11-a1293b7cfaad" Name="EndBearingR4DesignFactor" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="61348c86-77aa-424f-bd60-eb409be7a5a9" Name="NoOfULTTest" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="26f00a96-ccad-4aac-867f-cb651a621139" Name="NoOfWorkingLoadTest_MaintainedLoadTest" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="dd17ded2-13c7-4027-b206-a9a5e3bd28e8" Name="NoOfWorkingLoadTest_RapidLoadTest" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="52b5ba64-8d26-48ad-9641-143a6342ca08" Name="NoOfNonDestructiveTestPile" Group="STR" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="bca92d09-382a-460e-8c1a-961a83e795e9" Name="PreInsulated" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008010" Name="Duct Fittings" />
+        <Category ID="-2008000" Name="Ducts" />
+        <Category ID="-2008049" Name="Pipe Fittings" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1e91d37e-24c9-42e6-9668-479bc3d89205" Name="InnerDiameter" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008049" Name="Pipe Fittings" />
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e0afab24-7a62-4b4f-a798-29108e93bf57" Name="DemountableStructureAbovePipe" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2008044" Name="Pipes" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="58a5a0a6-36a3-49f3-a94a-cdaa57a30303" Name="NominalDiameter" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2008049" Name="Pipe Fittings" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="49562a47-3696-4817-a1ef-a3163d35a774" Name="OuterDiameter" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2008049" Name="Pipe Fittings" />
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5451360f-f3d1-475f-9c97-bc080e75fb99" Name="TurfSpecies" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a57b4571-0b61-400e-8b51-79b021ec8b23" Name="Compensated" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="7b91d215-0b40-40a8-9dda-4eb7ee3e7e49" Name="Encroachment" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cbe8df5f-6642-4594-8143-47755e4013ed" Name="CarparkProvision" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="291ab0c3-13b1-444e-92ba-55710ea9172f" Name="AI_AmmoniaAndAmmonium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e092806e-a7c1-418b-87a5-cfa01aea87ac" Name="AI_Antimony" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e43a5431-c53b-4340-a31b-005e9f1f9c4d" Name="AI_Arsenic" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="149835cd-737a-49be-9ddb-bff34579462f" Name="AI_Benzene" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e7f024f0-e5a6-4d42-ad2b-c6126daf77a1" Name="AI_Cadmium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="10f9ebb4-78d5-48ec-b15c-f6a1fd87df5e" Name="AI_CarbonMonoxide" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="07b857f5-675f-4dbd-8fd6-3973e7dd015d" Name="AI_Chlorine" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3df0107f-ec49-43aa-ae0d-513a733c8410" Name="AI_Copper" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8a0d027a-ecb0-4cc3-b36c-896c31b51e63" Name="AI_DioxinsAndFurans" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="7f1efc6f-492c-4de0-803e-6d30c05e63df" Name="AI_EthyleneOxide" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e20317bd-b274-42b1-9dc3-52a99ddb0487" Name="AI_FlourineAndHydrofluoricAcid" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="fff993d1-8976-4a1b-a49d-a88fe953a81d" Name="AI_Formaldehyde" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2693ec76-8f19-4961-8b66-b27b0aad4da6" Name="AI_HydrogenChloride" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c3b65ef7-4684-4984-abe2-502c700bcbfd" Name="AI_HydrogenSulphide" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5b7a4cbf-3c8a-4637-9b88-6c3194f180e6" Name="AI_Lead" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b2cbd941-7620-4a17-a881-f7d7b6797ecb" Name="AI_Mercury" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8829ae58-69cd-4114-8bdb-e8942bb59180" Name="AI_OxidesOfNitrogen" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="13191bd1-c9b7-4da2-b7ca-4338a6422b6a" Name="AI_ParticulateSubstances" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8cc41c65-d30d-472c-8b6b-8f1f44d27fd0" Name="AI_StyreneMonomer" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1d458b2f-3252-48e7-af57-26d3d032653f" Name="AI_SulphurDioxide" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="204dacb6-36a0-4ded-9bb1-a6e32e2f94a4" Name="AI_SulphurTrioxideAndAcidGases" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f0b0a673-c41a-4923-bd94-6bdbbb166017" Name="AI_SulphurTrioxideOrSulphuricAcidMist" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="080a0994-5a28-4f0e-a4df-c8a6d9bdb00b" Name="AI_VinylChlorideMonomer" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="22202082-2904-47c1-bf08-597126c77b2a" Name="TED_Arsenic" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="7f685aa0-8465-46b0-b065-8142eb862df2" Name="TED_Barium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a1d83037-7054-47cc-9324-2f7d3f11b49b" Name="TED_Beryllium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="9e74f506-fcfd-4570-9f7b-900dcf4395a9" Name="TED_BiochemicalOxygenDemand" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1d57b64a-0f75-4d0f-8021-178cd9de266f" Name="TED_Boron" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="77070117-cd98-47ea-935d-18b35a401daf" Name="TED_Cadmium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a07e919d-7142-4dfe-b19c-1f981201e49d" Name="TED_Calcium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4aa52dd5-c9a1-451e-8212-e621af6ce590" Name="TED_ChemicalOxygenDemand" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="9ff90de7-c550-43fc-a2c8-83a6c8a5c3b7" Name="TED_Chloride" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4dc7e6ca-9087-44a1-b566-2246251354b8" Name="TED_Chromium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b01ca9dc-ad93-40a0-88e8-6e19da01c941" Name="TED_Colour" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d45b66d1-a2a1-48e5-a997-435b31f82eaf" Name="TED_Copper" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b44899bb-c33f-41e0-9578-4c324505f886" Name="TED_Cyanide" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cb5592c3-99e8-40db-bd28-cd066aebade8" Name="TED_Detergent" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="03193a5c-872e-4d07-ab43-aa80001d81fc" Name="TED_GreaseAndOil" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f076e639-5157-4173-9cb9-a22dc0a77746" Name="TED_Iron" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="98cdea31-3051-44ec-bedc-5708b1e7a3e6" Name="TED_Lead" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="fcbac4e9-ef0c-4b2e-87bd-85d83b94e5b0" Name="TED_Magnesium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="50e05473-7e4a-405b-8ea2-a54ad88412c6" Name="TED_Manganese" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="fdc98950-0645-4e33-a0f3-518ec8800712" Name="TED_Mercury" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e948afb9-cbcf-4199-b51c-3a1db428fcf0" Name="TED_MetalsInTotal" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="569cd197-aaeb-4979-adaf-0fe2a417419b" Name="TED_Nickel" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d3b03cdf-d1c1-4dd9-815e-8be62032e401" Name="TED_Nitrate" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6011b573-5cd0-4c0a-8ae8-f2078e7ae9ea" Name="TED_PhenolicCompound" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b09a960a-58b3-451c-b550-52bd92c3e07a" Name="TED_Phosphate" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c7c32096-ad15-448d-bbef-04c5af2a2436" Name="TED_PHValue" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cbd674b8-b10c-494d-b6dc-540d2131d95f" Name="TED_Selenium" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e6418245-c81c-4cde-a496-cb8cc6ab2b84" Name="TED_Silver" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="16b229d7-d2d9-4591-b3c5-8649aad501b7" Name="TED_Sulphate" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0f8663f9-d045-4d64-a59e-cbdd633ac641" Name="TED_Sulphide" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5323d76f-6306-477c-9f7b-fb9129bf36be" Name="TED_TemperatureOfDischarge" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a3bedd13-8d6e-476c-ac66-6e15d28294c7" Name="TED_Tin" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f9fd12f2-4d6a-474f-84af-2c281d7f117d" Name="TED_TotalDissolvedSolid" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="21611dc8-14a9-48ff-95a3-933b91894f52" Name="TED_TotalSuspendedSolid" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="61ebdf5c-0265-40af-9af9-f38464dd88f6" Name="TED_Zinc" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1e2de39d-6063-4189-89d5-27302d442ce5" Name="Accreditation_MAS" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="84c9f221-5ed0-4101-adbe-7bc3e7bd442d" Name="IsCommon" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6c77388f-5ab4-44dd-be86-2f7d334db466" Name="OwnerBuiltOwnerStay" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="def840ce-f845-4881-84f0-17abea953277" Name="ProjectDevelopmentType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8ab2e13f-a6eb-49c3-a524-3c68fc093671" Name="Capacity" Group="MEP" Type="Double" UnitType="autodesk.spec.aec.piping:flow-2.0.0" UnitTypeDisplay="PIPING_FLOW" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="315b29ad-ed10-4f35-9337-9331b2059be4" Name="Duty" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a3168522-442a-477f-bde3-53ddea0e9d83" Name="Standby" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e52093a4-af34-4b19-bb49-0424749501a0" Name="PumpHead" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c3a637e5-000f-4516-8f40-722ec5b6e0fd" Name="SafetyBarrier" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000126" Name="Railings" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a39f946c-7a4a-44fd-b88b-44aff32ae7e3" Name="TypeOfBarrier" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000126" Name="Railings" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="22e35f21-2e11-4d9f-92da-352e76dea5cc" Name="IsLaminated" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000126" Name="Railings" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="56a43e7f-9858-41c7-b307-9528936d4e0c" Name="TransitionRamp" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000180" Name="Ramps" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="dc333ade-e254-444e-a699-057878aa5781" Name="Accessway" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000180" Name="Ramps" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="79d7612d-b1aa-4ae7-a554-8fb3803a0fc5" Name="Egress" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000180" Name="Ramps" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f503bbde-37e5-44cb-aa6a-41192e338463" Name="Ingress" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000180" Name="Ramps" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="720adf88-508d-45aa-9f3e-857d3d5db810" Name="Vehicular" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000180" Name="Ramps" />
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c02c415b-bc30-4ce6-9ba9-f5074f569ad2" Name="InnerLength" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000095" Name="Model Groups" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6b5e3b1d-98a2-44de-86c9-c122b22bb826" Name="InnerWidth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000095" Name="Model Groups" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="af638f46-5698-4318-a8e2-a9a2229da783" Name="OuterLength" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000095" Name="Model Groups" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="61fb6329-e600-4225-8dca-52733fd9de16" Name="OuterWidth" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000095" Name="Model Groups" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="a1416359-8409-402c-8ce2-3dec87101712" Name="ChamferRadius" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000095" Name="Model Groups" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="30dc18ec-431b-4948-a3e3-e68251b57a2a" Name="AirTight" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1b19f8f1-3795-45ef-93c5-57275e30ec02" Name="VolumeControlled" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000023" Name="Doors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="010a6e2e-e2f4-428e-9611-e9734b24de00" Name="CompactionRatio" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e08262cd-09a7-4558-8338-8616db524880" Name="NominalCapacity" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:volume-2.0.0" UnitTypeDisplay="Volume" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f01a1874-5a17-424c-94d3-24195d01e3bf" Name="ColourCode" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e0a189d7-295a-4027-a58f-cdcf9ed6a5c2" Name="BasePlateMaterial " Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1104e2f4-4ca2-4952-b752-95a8523544d4" Name="BasePlateThickness" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="22cb3c8f-b5de-48db-9fac-de3c2c00475e" Name="TailGateOrientation" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cb37d623-4180-4be5-a4a6-1205b8aaafa8" Name="HookUpPoint" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="b534771b-6ca7-49a2-b29a-33ceb33c859f" Name="EquipmentType" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2fcabc1c-f88d-4193-b44c-b27c20a5dfd5" Name="Litre" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="193b6125-8088-4623-a4b0-737b2c81b324" Name="DesignedVehicleMass" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5bac7047-af27-498c-8906-ede727de4ce1" Name="RoadCategory" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="eccee2c6-3905-4242-8417-c44d98fe3360" Name="LoadingCapacity" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="465f1c9d-3946-417d-bf97-8514fdf0155b" Name="KerbType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8c30a3e9-7b61-41e9-955c-45d8bd509934" Name="WELS" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="40e815e5-962f-4dd1-a903-5d1e580a9859" Name="AmbulantDisabled" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="84bb8d82-dce7-44ca-bab0-c5e103b65009" Name="ChildrenFriendly" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="ccf47c8b-6b0b-4d6c-9a2e-457d7cf1116a" Name="Mounting" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0117eb61-4cf6-42c7-a95e-915293c9fe46" Name="Waterless" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="101d227e-807d-4298-a36e-ddaab5d3526c" Name="PanMounting" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="75e315b3-cecc-4af4-92db-7140c8719723" Name="ToiletPanType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d64b5261-1c21-4844-b858-eb4dda10e270" Name="SeatingCapacity" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000080" Name="Furniture" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="e2f6e5e9-f466-4f16-a0c5-bb6921d18379" Name="ShadingDevice" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="bc276365-fbe4-4af5-893f-dc701940c249" Name="MountingHeight" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001350" Name="Specialty Equipment" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="df4c49fc-1426-4790-bdb3-605bbb41832b" Name="NumberOfWorkers" Group="ARC" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="57458293-78e0-4efa-992d-b1be3e44965c" Name="BroadLandUse" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4d58863e-55d5-4953-a3fc-b9ed3327ed00" Name="VacantLand" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001079" Name="Toposolid" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0e6c8770-da77-4724-a4b4-9ca6b107da08" Name="BottomDistribution_nominal" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6c74e0f3-6158-43fd-951d-431e802a1641" Name="BottomMain_nominal" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="895956f2-3077-4e46-8cfe-5d0589246634" Name="LatticeGirderReinforcement" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f398ee95-746d-4f78-885c-bfbb49914fa6" Name="SlabType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3575838a-e050-44d4-8fb1-3a06d475c052" Name="TopDistribution_nominal" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3aa85a0e-896c-4f13-8107-637721e4c819" Name="TopMain_nominal" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="047cb1d8-2c21-403d-9538-7f2e7486365e" Name="TypeDesignator" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="84f26b47-f8a7-43de-ad5c-1614179941a7" Name="WeldedMesh" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000032" Name="Floors" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="24347268-119e-42c7-a73a-152ef38c8577" Name="AGF_DevelopmentUse" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6cf4614d-d167-4f22-a174-c4c816a9ca6c" Name="AGF_UnitNumber" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="70893134-5e43-4c2c-8aa0-380caf18d2e6" Name="AGF_BonusGFAType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1b372853-2430-4edf-b86b-e9f9ad5496cd" Name="AGF_Note" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2fed2202-4ad3-47d1-82e9-47a7542aad4e" Name="AGF_UseQuantum" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="19fda95b-883f-4637-8d3d-fad783803e75" Name="AGF_BuildingTypology" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1e6331e5-a4af-4973-b457-14650f44cb0d" Name="AGF_SupportingFacility" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="46cede7e-a0ee-4025-aa9a-960bdf2e38dc" Name="AST_AreaType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="6fddb12f-b8b9-45a4-b301-40a2690a83fe" Name="AST_LegalArea" Group="ARC" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5068298d-3a4d-4552-b0c2-fb62682a12c9" Name="AST_Prop_StrataLotNumber" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="85b8eb49-08f4-4d3b-94fc-5ecf732482b9" Name="AST_Extg_StrataLotNumber" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="ebf922d2-5457-48e8-9cfe-5779bb70d641" Name="ACN_ConnectivityType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c501c76b-25a9-47cb-b923-73950f82f8be" Name="ACN_ActivityGeneratingUseType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c51042d8-2c5a-49ef-91f0-581af67b1d77" Name="ACN_IsPavingSpecified" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f569ecc2-eb95-4ab1-9ebb-0e30e87fcf17" Name="ACN_PavingSpecification" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5d1347ae-3125-47e7-ae6d-71d5c7817cdf" Name="ACN_IsOpen24HoursToPublic" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3846ba13-db4a-460e-ad3d-b7710392ea91" Name="ACN_OpenTime" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4ab20081-f48a-45af-a8d7-92db8bd6985c" Name="ACN_CloseTime" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="ef78de9b-60cd-4a35-9842-3ef66953a688" Name="ALS_Species" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="94a2c44c-e22f-4a99-8e34-93b6001524c5" Name="AVF_IncludeAsGFA" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="03c5f6da-5d60-4d1d-98b1-a6aee40f3271" Name="CValue" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="49437431-98bd-46ce-b302-d0033c174a48" Name="ElderlyFriendly" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c2a129c8-6902-4d6d-8550-b5fa805b630c" Name="EmergencyVoiceCommunicationSystem" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8fb47627-a909-4592-b31c-600b31d39af8" Name="FireDetectionAndSuppressionSystem" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cca2ef61-2693-4f84-8c8c-7f36f3b0d57f" Name="FireEmergencyVentilationMode" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="124a433b-1179-47b1-9528-d28f46127590" Name="FullyCoveredWithTreesShrubs" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="239edb40-b665-4946-b766-7da66ca0e2ae" Name="HearingEnhancement" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="384eaa51-4009-4da0-a4a5-972c2b2b5e4a" Name="LargerAccessible" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="1ac06c85-3331-4137-9593-d9817d65bde8" Name="OccupancyLoad" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="98150056-6e26-4279-978a-d6e2f3149e1b" Name="OccupancyType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5aa583f3-c6c5-4f46-b991-545bcaee06ab" Name="ParkingType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="408bc51f-958a-484b-8300-5a812cd29ec3" Name="PurposeGroup" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="990c0af6-c20c-42f4-89d8-7bc535db6650" Name="RefuseOutput" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="2b2af4d6-c095-4816-924a-774a01be14ae" Name="Retrofit" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5bc754fd-976d-447a-a010-d952dfba3b13" Name="SmokeControlSystem" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="0af49406-4f27-4ad6-b9e1-9eef67816993" Name="SoundPowerLevel" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d8e4df4d-c7f7-4b11-b1ec-015904d890c9" Name="SoundPressureLevel" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="fdbc0d88-c226-497e-a8cf-65028510a5ae" Name="StepRampAccess" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="77574c1e-efe5-4320-9c3f-d28eeb947dee" Name="TwentyFourHourMannedStation" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="8bae491a-301e-48ad-a644-74ac50ff9c4c" Name="UnitNumber" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="7e1d3f4d-fcfc-4a7f-b290-d15dcb216b0b" Name="VentilationType" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="f275ac34-1014-4f4f-9196-dcd0ab89a107" Name="NumberOfRiser" Group="ARC" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="19bff4f0-9912-450c-80e3-4f25b33ad61a" Name="RiserHeight" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3670dad9-2ee1-4c03-921c-bd1a875c63c9" Name="NumberOfTreads" Group="ARC" Type="Integer" UnitType="autodesk.spec:spec.int64-2.0.0" UnitTypeDisplay="Integer" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="31850a36-cb74-4b26-bd56-10c6a6fbfdfc" Name="TreadLength" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000120" Name="Stairs" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3dcc1bf3-f2e4-4389-ab14-40c4eeb8b398" Name="IsPotable" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="5b4d070b-12c0-4aae-9148-6e9095519227" Name="EffectiveCapacity" Group="MEP" Type="Double" UnitType="autodesk.spec.aec:volume-2.0.0" UnitTypeDisplay="Volume" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2000160" Name="Rooms" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cabd1d87-2c33-4945-9e2b-951dad1e0f40" Name="BeddingType" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000151" Name="Generic Models" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="cf152f89-daf7-4ef9-bf91-5ddb8499ed5f" Name="IsPartyWall" Group="ARC" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="7ba06f64-92b1-4fab-b536-2a11f3178824" Name="BeamFaçade" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="bbeb9fdb-be73-4a45-a93e-b4ded4084867" Name="DoubleBayFaçade" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="514ac679-12a0-4f9f-a61c-30a82405327a" Name="HorizontalRebar" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="3c3f6fe3-f699-427f-b61f-011050a35cd5" Name="IsExternal" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="c028e60d-15bf-40ac-bf3b-9c41580718d7" Name="PrefinishedFaçade" Group="STR" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="712cec2e-c3a4-49d9-a246-f3fb86d8745d" Name="VerticalRebar" Group="STR" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000011" Name="Walls" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="d7bca22f-abcd-4fad-b0e4-122e8afca3d2" Name="UnitNumberTag" Group="MEP" Type="Boolean" UnitType="autodesk.spec:spec.bool-1.0.0" UnitTypeDisplay="YesNo" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="72e08c0f-12fc-4c06-99bd-dd16f6b9485b" Name="WaterSupplySource" Group="MEP" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="4e8d4df9-e183-4a94-973f-fd4bc78d508b" Name="SafetyBarrierHeight" Group="ARC" Type="Double" UnitType="autodesk.spec.aec:length-2.0.0" UnitTypeDisplay="Length" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="True" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="80edc558-0627-4623-83af-dd36561040e5" Name="PercentageOfOpening" Group="ARC" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2000014" Name="Windows" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="591c7ec6-2113-460c-a571-9292d8432dfb" Name="IfcObjectType" Group="Common" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003200" Name="Areas" />
+        <Category ID="-2001320" Name="Structural Framing" />
+        <Category ID="-2000151" Name="Generic Models" />
+        <Category ID="-2001160" Name="Plumbing Fixtures" />
+        <Category ID="-2000240" Name="Levels" />
+        <Category ID="-2000038" Name="Ceilings" />
+        <Category ID="-2001330" Name="Structural Columns" />
+        <Category ID="-2001040" Name="Electrical Equipment" />
+        <Category ID="-2000340" Name="Curtain Systems" />
+        <Category ID="-2008016" Name="Duct Accessories" />
+        <Category ID="-2000023" Name="Doors" />
+        <Category ID="-2001079" Name="Toposolid" />
+        <Category ID="-2001140" Name="Mechanical Equipment" />
+        <Category ID="-2000080" Name="Furniture" />
+        <Category ID="-2000032" Name="Floors" />
+        <Category ID="-2000996" Name="Shaft Openings" />
+        <Category ID="-2000014" Name="Windows" />
+        <Category ID="-2008085" Name="Fire Alarm Devices" />
+        <Category ID="-2001300" Name="Structural Foundations" />
+        <Category ID="-2001120" Name="Lighting Fixtures" />
+        <Category ID="-2001360" Name="Planting" />
+        <Category ID="-2001350" Name="Specialty Equipment" />
+        <Category ID="-2001180" Name="Parking" />
+        <Category ID="-2003101" Name="Project Information" />
+        <Category ID="-2008044" Name="Pipes" />
+        <Category ID="-2008010" Name="Duct Fittings" />
+        <Category ID="-2008000" Name="Ducts" />
+        <Category ID="-2008049" Name="Pipe Fittings" />
+        <Category ID="-2000160" Name="Rooms" />
+        <Category ID="-2000011" Name="Walls" />
+        <Category ID="-2000126" Name="Railings" />
+        <Category ID="-2000180" Name="Ramps" />
+        <Category ID="-2000095" Name="Model Groups" />
+        <Category ID="-2000035" Name="Roofs" />
+        <Category ID="-2008099" Name="Sprinklers" />
+        <Category ID="-2000120" Name="Stairs" />
+        <Category ID="-2008055" Name="Pipe Accessories" />
+      </Categories>
+    </Parameter>
+    <Parameter GUID="17110a6e-2a48-4254-9823-127bf626ba03" Name="SiteName" Group="Common" Type="Text" UnitType="autodesk.spec:spec.string-2.0.0" UnitTypeDisplay="Text" Description="" IsInstance="True" GroupUnder="autodesk.parameter.group:ifc-1.0.0" AlignGroupValues="False" UserModifiable="True" HideWhenNoValue="False">
+      <Categories>
+        <Category ID="-2003101" Name="Project Information" />
+      </Categories>
+    </Parameter>
+  </Parameters>
+</SharedParametersConfig>

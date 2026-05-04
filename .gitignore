@@ -1,0 +1,52 @@
+# === Office / OS junk ===
+~$*
+.DS_Store
+Thumbs.db
+
+# === Claude Code session settings ===
+.claude/
+
+# === PDF generation pipeline (private — instruction.md is the source of truth) ===
+node_modules/
+package.json
+package-lock.json
+generate-pdf.js
+pdf-config.js
+pdf-style.css
+instruction_with_toc.md
+
+# === AI / scratch artifacts ===
+summary.txt
+sg_classes.csv
+Classification_Summary.md
+CORENET_X_IFC-SG_SOP_v*.pdf
+
+# === Duplicate transcripts ===
+*copy.srt
+transcript.srt
+
+# === Intermediate / draft zips ===
+3-dynamo*.zip
+5-ifc-property-set.zip
+
+# === Meeting recordings & internal notes (kept private) ===
+20260424_IFC-SG Demonstration Meeting.mp4
+20260424_IFC-SG Demonstration Meeting.srt
+C2D_IFC-SG Demonstration Meeting.md
+C2D_IFC-SG Demonstration Meeting.pptx
+Micron Probe_BIM Submission_ MoM.xlsx
+
+# === Old CORENET COP editions (kept locally as reference) ===
+CORENET X COP First Edition 2023-09.*
+CORENET X COP Second Edition 2024-11.*
+CORENET X COP 2.1 Edition 2024-11.*
+CORENET X COP 3 Edition 2025-09.*
+Annex - Summary of Changes - 2023-09.*
+Annex - Summary of Changes - 2024-11.*
+
+# === Training materials (kept locally) ===
+step-1-ifc-sg-101-(sandbox).*
+
+# === Misc untracked ===
+Information.md
+convert_files.py
